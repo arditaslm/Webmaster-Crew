@@ -41,13 +41,14 @@ nav a:hover {
 
 header {
     text-align: center;
-    padding: 80px 20px;
+    padding: 85px 20px;
 }
 
 header h1 {
-    font-size: 46px;
+    font-size: 48px;
     margin-bottom: 10px;
     color: #facc15;
+    animation: glow 2s infinite alternate;
 }
 
 header p {
@@ -70,10 +71,12 @@ header p {
     margin-bottom: 28px;
     box-shadow: 0 10px 25px rgba(0,0,0,0.25);
     transition: 0.3s;
+    animation: fadeIn 0.8s ease;
 }
 
 .card:hover {
-    transform: translateY(-5px);
+    transform: translateY(-8px);
+    box-shadow: 0 15px 30px rgba(0,0,0,0.35);
 }
 
 h2 {
@@ -110,10 +113,12 @@ h2 {
     border-radius: 30px;
     font-weight: bold;
     box-shadow: 0 8px 18px rgba(0,0,0,0.25);
+    transition: 0.3s;
 }
 
 .btn:hover {
-    transform: scale(1.05);
+    transform: scale(1.06);
+    background: linear-gradient(135deg, #06b6d4, #2563eb);
 }
 
 iframe {
@@ -125,6 +130,28 @@ footer {
     padding: 22px;
     background: rgba(15, 23, 42, 0.9);
     font-size: 14px;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(25px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes glow {
+    from {
+        text-shadow: 0 0 10px #facc15;
+    }
+
+    to {
+        text-shadow: 0 0 25px #facc15;
+    }
 }
 
 @media (max-width: 700px) {
@@ -171,6 +198,20 @@ footer {
         Perkembangan teknologi telah membawa perubahan besar dalam dunia pendidikan.
         Teknologi memudahkan akses informasi, meningkatkan kreativitas, serta membuat
         proses pembelajaran menjadi lebih interaktif, fleksibel, dan efektif.
+    </p>
+</section>
+
+<section class="card">
+    <h2>🎯 Tujuan Project</h2>
+    <p>
+        Project ini dibuat untuk memberikan pemahaman mengenai pengaruh teknologi
+        dalam pembelajaran modern serta menunjukkan bagaimana teknologi dapat
+        dimanfaatkan untuk menciptakan solusi digital yang membantu proses belajar.
+    </p>
+    <p>
+        Melalui website ini, kami juga memperkenalkan EduTrack Pro, yaitu aplikasi
+        sederhana yang dikembangkan untuk membantu siswa memantau perkembangan
+        nilai dan hasil belajar secara digital.
     </p>
 </section>
 
@@ -271,7 +312,8 @@ footer {
             <li>Analisis hasil belajar</li>
         </ul>
 
-        <a href="#" class="btn">Buka EduTrack Pro</a>
+        <a href="#" class="btn">🚀 Buka EduTrack Pro</a>
+        <a href="#" class="btn">📂 Lihat Source Code</a>
     </div>
 </section>
 
