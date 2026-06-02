@@ -3,23 +3,29 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Webmaster Crew</title>
+<title>Webmaster Crew | Teknologi Pembelajaran</title>
 
 <style>
+* {
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+}
+
 body {
     margin: 0;
     font-family: 'Segoe UI', sans-serif;
-    background: linear-gradient(to right, #1e3c72, #2a5298);
+    background: linear-gradient(135deg, #0f172a, #1e3a8a, #2563eb);
     color: white;
 }
 
 nav {
-    background: rgba(0,0,0,0.35);
-    padding: 15px;
-    text-align: center;
     position: sticky;
     top: 0;
-    z-index: 10;
+    z-index: 100;
+    background: rgba(15, 23, 42, 0.9);
+    padding: 15px;
+    text-align: center;
+    backdrop-filter: blur(8px);
 }
 
 nav a {
@@ -30,37 +36,39 @@ nav a {
 }
 
 nav a:hover {
-    color: #ffd700;
+    color: #facc15;
 }
 
 header {
-    padding: 60px 20px;
     text-align: center;
-    background: rgba(0,0,0,0.25);
+    padding: 80px 20px;
 }
 
 header h1 {
-    font-size: 38px;
+    font-size: 46px;
     margin-bottom: 10px;
+    color: #facc15;
 }
 
 header p {
-    font-size: 18px;
-}
-
-.container {
-    padding: 25px;
-    max-width: 1000px;
+    font-size: 20px;
+    max-width: 750px;
     margin: auto;
 }
 
-.card {
-    background: white;
-    color: black;
+.container {
+    max-width: 1100px;
+    margin: auto;
     padding: 25px;
-    border-radius: 15px;
-    margin-bottom: 25px;
-    box-shadow: 0 8px 20px rgba(0,0,0,0.25);
+}
+
+.card {
+    background: rgba(255,255,255,0.95);
+    color: #0f172a;
+    padding: 28px;
+    border-radius: 18px;
+    margin-bottom: 28px;
+    box-shadow: 0 10px 25px rgba(0,0,0,0.25);
     transition: 0.3s;
 }
 
@@ -69,45 +77,69 @@ header p {
 }
 
 h2 {
-    color: #2a5298;
+    color: #1e40af;
+    margin-top: 0;
 }
 
 .grid {
     display: grid;
-    grid-template-columns: 1fr 1fr;
+    grid-template-columns: repeat(2, 1fr);
     gap: 18px;
 }
 
-.member {
-    background: #f3f6ff;
-    padding: 15px;
-    border-radius: 12px;
+.box {
+    background: #eef4ff;
+    padding: 18px;
+    border-radius: 14px;
+    border-left: 6px solid #2563eb;
+}
+
+.stat h3 {
+    font-size: 34px;
+    color: #2563eb;
+    margin: 0;
 }
 
 .btn {
     display: inline-block;
-    margin-top: 15px;
-    padding: 13px 25px;
-    background: linear-gradient(135deg, #00c6ff, #0072ff);
+    margin-top: 18px;
+    padding: 14px 28px;
+    background: linear-gradient(135deg, #2563eb, #06b6d4);
     color: white;
     text-decoration: none;
     border-radius: 30px;
     font-weight: bold;
+    box-shadow: 0 8px 18px rgba(0,0,0,0.25);
 }
 
 .btn:hover {
-    background: linear-gradient(135deg, #0072ff, #00c6ff);
+    transform: scale(1.05);
 }
 
 iframe {
-    border-radius: 12px;
+    border-radius: 14px;
 }
 
 footer {
     text-align: center;
-    padding: 18px;
+    padding: 22px;
+    background: rgba(15, 23, 42, 0.9);
     font-size: 14px;
-    background: rgba(0,0,0,0.35);
+}
+
+@media (max-width: 700px) {
+    .grid {
+        grid-template-columns: 1fr;
+    }
+
+    header h1 {
+        font-size: 34px;
+    }
+
+    nav a {
+        display: inline-block;
+        margin: 8px;
+    }
 }
 </style>
 </head>
@@ -117,23 +149,28 @@ footer {
 <nav>
     <a href="#home">Home</a>
     <a href="#about">About</a>
+    <a href="#facts">Facts</a>
+    <a href="#timeline">Timeline</a>
     <a href="#projects">Projects</a>
 </nav>
 
 <header id="home">
     <h1>Pengaruh Teknologi dalam Pembelajaran Modern</h1>
-    <p>Website edukasi karya Tim Radiant - Kelompok 7</p>
-    <a href="#projects" class="btn">Lihat Project</a>
+    <p>
+        Website edukasi karya Tim Radiant yang membahas peran teknologi
+        dalam meningkatkan kualitas pembelajaran di era digital.
+    </p>
+    <a href="#projects" class="btn">Lihat Project Kami</a>
 </header>
 
 <div class="container">
 
 <section class="card">
-    <h2>Deskripsi</h2>
+    <h2>📌 Deskripsi</h2>
     <p>
         Perkembangan teknologi telah membawa perubahan besar dalam dunia pendidikan.
         Teknologi memudahkan akses informasi, meningkatkan kreativitas, serta membuat
-        pembelajaran lebih interaktif dan efektif.
+        proses pembelajaran menjadi lebih interaktif, fleksibel, dan efektif.
     </p>
 </section>
 
@@ -141,57 +178,110 @@ footer {
     <h2>👥 About - Perkenalan Kelompok</h2>
 
     <div class="grid">
-        <div class="member">
+        <div class="box">
             <h3>Rey</h3>
-            <small>Graphic Designer</small>
-            <p>Bertugas membuat desain visual seperti layout, warna, dan tampilan agar website terlihat menarik dan nyaman dilihat.</p>
+            <b>Graphic Designer</b>
+            <p>Membuat desain visual, layout, warna, dan tampilan website agar terlihat menarik.</p>
         </div>
 
-        <div class="member">
+        <div class="box">
             <h3>Aufa</h3>
-            <small>Content Writer</small>
-            <p>Bertugas menyusun isi materi, informasi, serta teks yang ditampilkan pada website agar jelas dan mudah dipahami.</p>
+            <b>Content Writer</b>
+            <p>Menyusun materi, informasi, dan teks agar isi website jelas dan mudah dipahami.</p>
         </div>
 
-        <div class="member">
+        <div class="box">
             <h3>Ardian</h3>
-            <small>Web Developer</small>
-            <p>Bertugas membuat dan mengembangkan website menggunakan HTML dan CSS.</p>
+            <b>Web Developer</b>
+            <p>Mengembangkan website menggunakan HTML dan CSS serta menyusun tampilan halaman.</p>
         </div>
 
-        <div class="member">
+        <div class="box">
             <h3>Ilham</h3>
-            <small>Programmer</small>
-            <p>Bertugas menambahkan fitur interaktif dan fungsi tambahan agar website lebih dinamis.</p>
+            <b>Programmer</b>
+            <p>Menambahkan fitur interaktif dan mendukung pengembangan sistem digital kelompok.</p>
+        </div>
+    </div>
+</section>
+
+<section id="facts" class="card">
+    <h2>📊 Fakta Teknologi Pendidikan</h2>
+
+    <div class="grid">
+        <div class="box stat">
+            <h3>24/7</h3>
+            <p>Materi digital dapat diakses kapan saja dan di mana saja.</p>
+        </div>
+
+        <div class="box stat">
+            <h3>1000+</h3>
+            <p>Sumber belajar tersedia melalui internet dan platform edukasi.</p>
+        </div>
+
+        <div class="box stat">
+            <h3>Interaktif</h3>
+            <p>Teknologi membuat pembelajaran lebih menarik dan tidak monoton.</p>
+        </div>
+
+        <div class="box stat">
+            <h3>Mandiri</h3>
+            <p>Siswa dapat belajar sesuai kemampuan dan kecepatannya masing-masing.</p>
         </div>
     </div>
 </section>
 
 <section class="card">
-    <h2>Manfaat Teknologi</h2>
+    <h2>💡 Manfaat Teknologi</h2>
     <ul>
-        <li>Memudahkan akses informasi</li>
-        <li>Meningkatkan minat belajar</li>
-        <li>Mendukung belajar mandiri</li>
-        <li>Mempercepat pemahaman</li>
+        <li>Memudahkan akses informasi dan materi pembelajaran.</li>
+        <li>Meningkatkan minat belajar siswa.</li>
+        <li>Mendukung pembelajaran mandiri.</li>
+        <li>Membantu guru menyampaikan materi secara lebih menarik.</li>
+        <li>Mendorong kreativitas dan inovasi siswa.</li>
+    </ul>
+</section>
+
+<section id="timeline" class="card">
+    <h2>📅 Timeline Perkembangan Teknologi Pendidikan</h2>
+    <ul>
+        <li><b>2000-an:</b> Mulai berkembangnya e-learning dan pembelajaran berbasis komputer.</li>
+        <li><b>2010-an:</b> Smartphone dan internet mulai banyak digunakan untuk belajar.</li>
+        <li><b>2020:</b> Pembelajaran daring berkembang pesat.</li>
+        <li><b>2025:</b> Teknologi digital dan AI mulai banyak dimanfaatkan dalam pendidikan.</li>
     </ul>
 </section>
 
 <section id="projects" class="card">
     <h2>🚀 Projects</h2>
-    <h3>EduTrack Pro</h3>
-    <p>
-        EduTrack Pro adalah aplikasi rapor digital yang membantu siswa melihat perkembangan nilai,
-        rata-rata semester, dan analisis belajar secara lebih mudah.
-    </p>
-    <a href="#" class="btn">Buka EduTrack Pro</a>
+
+    <div class="box">
+        <h3>EduTrack Pro</h3>
+        <p>
+            EduTrack Pro adalah aplikasi rapor digital berbasis Python dan Streamlit
+            yang membantu siswa mencatat nilai, menghitung rata-rata, serta melihat
+            perkembangan akademik setiap semester.
+        </p>
+
+        <h4>Fitur Utama:</h4>
+        <ul>
+            <li>Input data siswa</li>
+            <li>Input nilai Semester 1-5</li>
+            <li>Perhitungan rata-rata otomatis</li>
+            <li>Grafik perkembangan nilai</li>
+            <li>Analisis hasil belajar</li>
+        </ul>
+
+        <a href="#" class="btn">Buka EduTrack Pro</a>
+    </div>
 </section>
 
 <section class="card">
-    <h2>Desain Kelompok</h2>
+    <h2>🎨 Desain Kelompok</h2>
+
     <div style="position: relative; width: 100%; height: 0; padding-top: 56.25%;">
         <iframe src="https://www.canva.com/design/DAHFekY8w0A/WeixMOlghyDnGKtaSB4oRA/view?embed"
-        style="position:absolute; width:100%; height:100%; top:0; left:0;" allowfullscreen>
+        style="position:absolute; width:100%; height:100%; top:0; left:0; width:100%; height:100%;"
+        allowfullscreen>
         </iframe>
     </div>
 </section>
@@ -199,7 +289,7 @@ footer {
 </div>
 
 <footer>
-    Web dibuat oleh Tim Webmaster Crew 🚀
+    © 2026 Webmaster Crew | Team Radiant | Proyek Pembelajaran Berbasis Teknologi
 </footer>
 
 </body>
