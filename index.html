@@ -3,8 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-<title>Pengaruh Teknologi</title>
+<title>Webmaster Crew</title>
 
 <style>
 body {
@@ -14,133 +13,193 @@ body {
     color: white;
 }
 
-header {
-    padding: 30px;
+nav {
+    background: rgba(0,0,0,0.35);
+    padding: 15px;
     text-align: center;
-    background: rgba(0,0,0,0.3);
-    font-size: 28px;
+    position: sticky;
+    top: 0;
+    z-index: 10;
+}
+
+nav a {
+    color: white;
+    text-decoration: none;
+    margin: 0 18px;
     font-weight: bold;
 }
 
+nav a:hover {
+    color: #ffd700;
+}
+
+header {
+    padding: 60px 20px;
+    text-align: center;
+    background: rgba(0,0,0,0.25);
+}
+
+header h1 {
+    font-size: 38px;
+    margin-bottom: 10px;
+}
+
+header p {
+    font-size: 18px;
+}
+
 .container {
-    padding: 20px;
-    max-width: 900px;
+    padding: 25px;
+    max-width: 1000px;
     margin: auto;
 }
 
 .card {
     background: white;
     color: black;
-    padding: 20px;
-    border-radius: 12px;
-    margin-bottom: 20px;
-    box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+    padding: 25px;
+    border-radius: 15px;
+    margin-bottom: 25px;
+    box-shadow: 0 8px 20px rgba(0,0,0,0.25);
+    transition: 0.3s;
+}
+
+.card:hover {
+    transform: translateY(-5px);
 }
 
 h2 {
     color: #2a5298;
 }
 
-ul {
-    padding-left: 20px;
+.grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 18px;
+}
+
+.member {
+    background: #f3f6ff;
+    padding: 15px;
+    border-radius: 12px;
+}
+
+.btn {
+    display: inline-block;
+    margin-top: 15px;
+    padding: 13px 25px;
+    background: linear-gradient(135deg, #00c6ff, #0072ff);
+    color: white;
+    text-decoration: none;
+    border-radius: 30px;
+    font-weight: bold;
+}
+
+.btn:hover {
+    background: linear-gradient(135deg, #0072ff, #00c6ff);
 }
 
 iframe {
-    border-radius: 10px;
+    border-radius: 12px;
 }
 
 footer {
     text-align: center;
-    padding: 15px;
+    padding: 18px;
     font-size: 14px;
-    background: rgba(0,0,0,0.3);
+    background: rgba(0,0,0,0.35);
 }
 </style>
 </head>
 
 <body>
 
-<header>
-Pengaruh Teknologi dalam Pembelajaran Modern
+<nav>
+    <a href="#home">Home</a>
+    <a href="#about">About</a>
+    <a href="#projects">Projects</a>
+</nav>
+
+<header id="home">
+    <h1>Pengaruh Teknologi dalam Pembelajaran Modern</h1>
+    <p>Website edukasi karya Tim Radiant - Kelompok 7</p>
+    <a href="#projects" class="btn">Lihat Project</a>
 </header>
 
 <div class="container">
 
-<div class="card">
-<h2>Deskripsi</h2>
-<p>
-Perkembangan teknologi telah membawa perubahan besar dalam dunia pendidikan.
-Teknologi memudahkan akses informasi, meningkatkan kreativitas, serta membuat pembelajaran lebih interaktif.
-</p>
-</div>
+<section class="card">
+    <h2>Deskripsi</h2>
+    <p>
+        Perkembangan teknologi telah membawa perubahan besar dalam dunia pendidikan.
+        Teknologi memudahkan akses informasi, meningkatkan kreativitas, serta membuat
+        pembelajaran lebih interaktif dan efektif.
+    </p>
+</section>
 
-<div class="card">
+<section id="about" class="card">
+    <h2>👥 About - Perkenalan Kelompok</h2>
 
-    <div class="card">
-<h2>👥 Perkenalan Kelompok</h2>
+    <div class="grid">
+        <div class="member">
+            <h3>Rey</h3>
+            <small>Graphic Designer</small>
+            <p>Bertugas membuat desain visual seperti layout, warna, dan tampilan agar website terlihat menarik dan nyaman dilihat.</p>
+        </div>
 
-<div style="display:grid; grid-template-columns:1fr 1fr; gap:15px;">
+        <div class="member">
+            <h3>Aufa</h3>
+            <small>Content Writer</small>
+            <p>Bertugas menyusun isi materi, informasi, serta teks yang ditampilkan pada website agar jelas dan mudah dipahami.</p>
+        </div>
 
-<div>
-<b>Rey</b><br>
-<small>Graphic Designer</small>
-<p style="font-size:14px;">
-Bertugas membuat desain visual seperti layout, warna, dan tampilan agar website terlihat menarik, estetik, dan nyaman dilihat.
-</p>
-</div>
+        <div class="member">
+            <h3>Ardian</h3>
+            <small>Web Developer</small>
+            <p>Bertugas membuat dan mengembangkan website menggunakan HTML dan CSS.</p>
+        </div>
 
-<div>
-<b>Aufa</b><br>
-<small>Content Writer</small>
-<p style="font-size:14px;">
-Bertugas menyusun dan menulis isi materi, informasi, serta teks yang ditampilkan pada website agar jelas, rapi, dan mudah dipahami.
-</p>
-</div>
+        <div class="member">
+            <h3>Ilham</h3>
+            <small>Programmer</small>
+            <p>Bertugas menambahkan fitur interaktif dan fungsi tambahan agar website lebih dinamis.</p>
+        </div>
+    </div>
+</section>
 
-<div>
-<b>Ardian</b><br>
-<small>Web Developer</small>
-<p style="font-size:14px;">
-Bertugas membuat dan mengembangkan website menggunakan HTML dan CSS serta menggabungkan semua bagian seperti desain dan konten menjadi satu tampilan utuh.
-</p>
-</div>
+<section class="card">
+    <h2>Manfaat Teknologi</h2>
+    <ul>
+        <li>Memudahkan akses informasi</li>
+        <li>Meningkatkan minat belajar</li>
+        <li>Mendukung belajar mandiri</li>
+        <li>Mempercepat pemahaman</li>
+    </ul>
+</section>
 
-<div>
-<b>Ilham</b><br>
-<small>Programmer</small>
-<p style="font-size:14px;">
-Bertugas menambahkan fitur interaktif dan fungsi tambahan pada website agar lebih dinamis dan menarik saat digunakan.
-</p>
-</div>
+<section id="projects" class="card">
+    <h2>🚀 Projects</h2>
+    <h3>EduTrack Pro</h3>
+    <p>
+        EduTrack Pro adalah aplikasi rapor digital yang membantu siswa melihat perkembangan nilai,
+        rata-rata semester, dan analisis belajar secara lebih mudah.
+    </p>
+    <a href="#" class="btn">Buka EduTrack Pro</a>
+</section>
 
-</div>
-  </div>
-    
-<h2>Manfaat Teknologi</h2>
-<ul>
-<li>Memudahkan akses informasi</li>
-<li>Meningkatkan minat belajar</li>
-<li>Mendukung belajar mandiri</li>
-<li>Mempercepat pemahaman</li>
-</ul>
-</div>
-
-<div class="card">
-<h2>Desain Kelompok</h2>
-
-<!-- CANVA -->
-<div style="position: relative; width: 100%; height: 0; padding-top: 56.25%;">
-  <iframe src="https://www.canva.com/design/DAHFekY8w0A/WeixMOlghyDnGKtaSB4oRA/view?embed"
-  style="position:absolute; width:100%; height:100%; top:0; left:0;" allowfullscreen>
-  </iframe>
-</div>
-
-</div>
+<section class="card">
+    <h2>Desain Kelompok</h2>
+    <div style="position: relative; width: 100%; height: 0; padding-top: 56.25%;">
+        <iframe src="https://www.canva.com/design/DAHFekY8w0A/WeixMOlghyDnGKtaSB4oRA/view?embed"
+        style="position:absolute; width:100%; height:100%; top:0; left:0;" allowfullscreen>
+        </iframe>
+    </div>
+</section>
 
 </div>
 
 <footer>
-Web dibuat oleh Tim Webmaster Crew 🚀
+    Web dibuat oleh Tim Webmaster Crew 🚀
 </footer>
 
 </body>
