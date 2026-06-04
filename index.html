@@ -132,23 +132,35 @@ h2 {
 }
 
 .btn {
-    display: inline-block;
-    margin-top: 18px;
-    padding: 14px 28px;
-    background: linear-gradient(135deg, #2563eb, #06b6d4);
-    color: white;
-    text-decoration: none;
-    border-radius: 30px;
-    font-weight: bold;
-    box-shadow: 0 8px 18px rgba(0,0,0,0.25);
-    transition: 0.3s;
-    border: none;
-    cursor: pointer;
+    display:inline-block;
+    margin-top:18px;
+    padding:15px 35px;
+
+    background:
+    linear-gradient(
+    135deg,
+    #ffd700,
+    #ff9f1c);
+
+    color:black;
+    font-weight:bold;
+    text-decoration:none;
+
+    border-radius:50px;
+
+    box-shadow:
+    0 10px 25px rgba(255,215,0,.4);
+
+    transition:.3s;
 }
 
-.btn:hover {
-    transform: scale(1.06);
-    background: linear-gradient(135deg, #06b6d4, #2563eb);
+.btn:hover{
+    transform:
+    translateY(-5px)
+    scale(1.05);
+
+    box-shadow:
+    0 15px 35px rgba(255,215,0,.7);
 }
 
 iframe {
@@ -213,10 +225,13 @@ footer {
 </nav>
 
 <header id="home">
-    <h1>Pengaruh Teknologi dalam Pembelajaran Modern</h1>
-    <p>
-        Website edukasi karya Tim Radiant yang membahas peran teknologi
-        dalam meningkatkan kualitas pembelajaran di era digital.
+    <img src="logo.png"
+style="
+width:220px;
+margin-bottom:25px;
+filter:drop-shadow(0 0 25px gold);
+animation:float 3s ease-in-out infinite;
+">
     </p>
     <a href="#projects" class="btn">Lihat Project Kami</a>
 </header>
